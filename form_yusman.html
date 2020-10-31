@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="yusman" description="formcss"/>
+        <meta charset="UTF-8"/>
+
+        <style>
+            body {font-family: Arial, Helvetica, sans-serif;}
+            body {
+                background-image: url(../PraktikumWeb/img/gambar.jpg);
+                background-size: auto;
+                background-attachment: fixed;
+            }
+
+            input[type=text],input[type=email], input[type=number], input[type=date], select,
+            textarea
+            {
+                width: 100%;
+                margin: 10px 0;
+                padding: 10px 20px;
+                display: inline-block;
+                border: none;
+                border-radius: 5px;
+                box-sizing:border-box;
+            }
+
+            input[type=submit]
+            {
+                width: 100%;
+                background-color: #2e0487;
+                color: white;
+                padding: 15px 21px;
+                margin: 10px 0;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            input[type=submit]:hover
+            {
+                background-color: #440bbd;
+            }
+
+            input[type=radio]
+            {
+                padding: 14px 21px;
+                margin: 15px
+            }              
+
+            .container
+            {
+                border-radius: 6px;
+                background-color: #f7eded;
+                padding: 53px;
+                width: 50%;
+                margin: auto;
+            }
+
+            h1,h2
+            {
+                text-align: center;
+            }
+
+            label
+            {
+                font-weight: lighter;
+                font-size: 18px;
+            }
+
+            #SITI
+            {
+                font-size: 17px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1> Form Registrasi Mahasiswa </h1>
+            <br/><br/>
+            <hr/>
+            <h2>Data diri</h2>
+            <hr/>
+            <br/>
+            <form action="/action.php">
+                <!-- nama lengkap -->
+                <label>Nama Lengkap</label>
+                <input type="text" placeholder="Masukkan Nama Lengkap anda.." name="namalengkap">
+
+                <!-- Form Tempat dan tanggal lahir -->
+                <label>Tempat lahir </label>
+                <input type="text" placeholder="Masukkan Tempat lahir anda.." name="tempatlahir">
+                <label>Tanggal lahir</label>
+                <input type="date" name="tanggallahir">
+                
+                <!-- Form usia -->
+                <label>Usia</label>
+                <input type="number" placeholder="Masukkan usia anda.." name="usia">
+
+                <!-- Form jenis kelamin -->
+                <label>Jenis Kelamin</label>
+                <br/><br/>
+                <input type="radio" name="jeniskelamin" value="laki-laki">
+                <label for="laki-laki">Laki-laki</label>
+                
+                <input type="radio" name="jeniskelamin" value="perempuan">
+                <label for="perempuan">Perempuan</label>
+                <br/><br/><br/><br/>
+
+                <!-- Form no. hp -->
+                <label> No. Handphone </label>
+                <input type="number" name="nomorhp" placeholder="Masukkan nomor hp anda..">
+
+                <!-- Form no. telpon -->
+                <label>No.Telpon (Opsional)</label>
+                <input type="number" name="nomortelepon" placeholder="Masukkan nomor telepon anda (Jika ada)..">
+
+                <!-- Form Alamat rumah -->
+                <label>Alamat Rumah</label>
+                <textarea nama="alamatrumah" cols="55" rows="6"></textarea> 
+                
+                <!-- Form alamat Kantor -->
+                <label>Alamat Kantor</label>
+                <textarea nama="alamatkantor" cols="50" rows="6"></textarea>
+
+                <!-- Form email -->
+                <label>Email</label>
+                <input type="email" placeholder="Masukkan Email anda..." name="email">
+                <br/><br/><br/><br/>
+
+
+                <!-- Form asal kampus -->
+                <label>Asal Kampus</label>
+                <input type="text" placeholder="Masukkan nama kampus anda...">
+                
+                <!-- Angkatan -->
+                <label>Tahun Angkatan</label>
+                <select name="tahun">
+                    <option value="2020/2021">2020/2021</option>
+                    <option value="2020/2021">2019/2020</option>
+                    <option value="2020/2021">2018/2019</option>
+                    <option value="2020/2021">2017/2018</option>
+                </select>
+
+                <!-- Jurusan -->
+                <label>Jurusan</label>
+                <br/>
+                <input type="radio" name="jurusan" value="TI">
+                <label for="TI" id="SITI">Teknik Informatika</label>
+                <input type="radio" name="prodi" value="SI">
+                <label for="SI" id="SITI">Sistem Informasi</label>
+                
+                <input type="submit" value="submit">
+            </form>
+        </div>
+    </body>
+</html>
